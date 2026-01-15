@@ -7,6 +7,7 @@ except ImportError:
     print("\n[ERROR] 'ultralytics' library not found.")
     print("Please run: pip install ultralytics")
     print("Then try running this script again.\n")
+    input("Press Enter to exit...")
     exit(1)
 
 # --- CONFIGURATION ---
@@ -313,4 +314,11 @@ def main():
     cv2.destroyAllWindows()
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except Exception as e:
+        print(f"\n[CRITICAL ERROR] Execution Failed: {e}")
+        print("Ensure you have a webcam connected and Python 3.10-3.12.")
+        import traceback
+        traceback.print_exc()
+        input("Press Enter to exit...")
