@@ -1,0 +1,35 @@
+# Virtual Environment
+test-env/
+venv/
+env/
+ENV/
+
+# Python Cache
+__pycache__/
+*.py[cod]
+*.so
+*.dll
+
+# YOLO
+runs/
+weights/
+*.pt
+*.onnx
+*.engine
+
+# Media
+*.mp4
+*.avi
+*.jpg
+*.jpeg
+*.png
+datasets/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
